@@ -1,4 +1,9 @@
+html {
+    font-size: 1px;
+}
+
 body {
+    
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #8dc63f;
@@ -7,22 +12,24 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    padding: 0 15px;
-    max-width: 960px;
+    padding: 0 15rem;
+    max-width: 960rem;
     background-color: #fff;
     box-sizing: border-box;
 }
 .header {
-    padding: 25px 0;
+    flex-wrap: wrap;
+    row-gap: 20rem;
+    padding: 25rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .header p,
 .contacts a {
-
+    text-align: center;
     margin: 0;
-    font-size: 22px;
+    font-size: 22rem;
     color: #39930d;
     text-decoration: none;
 }
@@ -30,58 +37,62 @@ body {
 .header b,
 .header strong {
     display: block;
-    font-size: 44px;
+    font-size: 44rem;
     color: #39930d;
 }
 
 .header i {
     display: block;
-    font-size: 14px;
+    font-size: 14rem;
     color: #5a5a5a;
 }
 .logo {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    row-gap: 10rem;
 }
 .logo img {
-    margin-left: 35px;
+
+    margin: 0 35rem;
     transition: all 1s ease;
 }
 
-.logo img:hover {
-    padding-left: 200px;
-}
+
 .contacts i {
-    text-align: right;
+    text-align: center;
 }
 .contacts a {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 10rem;
 
 }
 
 .image {
     width: 100%;
+    min-height: 200rem;
+    object-fit: cover;
+    object-position: 70%;
 }
 .main {
-    padding-bottom: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 30rem;
     display: flex;
     justify-content: space-between;
 }
-.content {
-    max-width: 600px;
-}
+
 .content h1 {
-    font-size: 24px;
+    font-size: 24rem;
     color: #39930d;
 }
 .content p {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 14rem;
+    line-height: 1.5em;
     color: #343434;
 }
 .menu {
-    width: 300px;
+    flex: 0 0 100%;
     cursor: url(cursor.cur), pointer;
 }
 
@@ -90,22 +101,22 @@ body {
     list-style: none;
 }
 .menu p {
-    padding: 11px 20px;
-    font-size:18px;
+    padding: 11rem 20rem;
+    font-size:18rem;
     color: #fff;
     background-color: #39930d;
 }
 .menu a {
     display: block;
-    padding: 8px 20px;
-    font-size: 14px;
-    line-height: 14px;
+    padding: 8rem 20rem;
+    font-size: 14rem;
+    line-height: 14rem;
     color: #39930d;
     text-transform: uppercase;
     transition: all 0.55s ease;
 }
 .menu a:hover {
-    padding-left: 40px;
+    padding-left: 40rem;
     color: #fff;
     font-style: italic;
     background-color:#343434; 
@@ -113,9 +124,55 @@ body {
 }
 
 .footer {
-    padding: 14px 15px;
-    margin: 0 -15px;
-    font-size: 14px;
+    padding: 14rem 15rem;
+    margin: 0 -15rem;
+    font-size: 14rem;
     color: #fff;
     background-color: #39930d;
+}
+
+@media screen and (min-width: 425px) {
+    .header p {
+        text-align: left;
+    }
+
+}
+
+@media screen and (min-width: 626px) {
+    .header {
+        justify-content: space-between;
+    }
+    .contacts i {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .main {
+        flex-wrap: nowrap;
+    }
+    .menu {
+        flex: 0 0 300rem;
+        width: 300rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 300rem;
+    }
+    
+    
+}
+
+@media screen and (min-width: 935px) {
+    .logo img:hover {
+        padding-left: 200rem;
+    }
+
+}
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 1.4px;
+    }
+    .logo img {
+        width: 7vw;
+    }
 }
